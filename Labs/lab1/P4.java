@@ -10,10 +10,10 @@ public class P4{
             sc.close();
             return;
         }
-
         for (int i = 1; i <= height; i++) {
             for (int j = 1; j <= i; j++) {
-                if (j % 2 == 1) {
+
+                if ((j + i) % 2 == 0) {
                     System.out.print("AA");
                 }
                 else {

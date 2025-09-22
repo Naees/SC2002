@@ -21,7 +21,7 @@ public class P3 {
         System.out.println("-----------------------");
         for (int usd = starting; usd <= ending; usd += increment) {
             double sgd = usd * CONVERSION_RATE;
-            System.out.printf("%-10d %10.1f%n", usd, sgd);
+            System.out.printf("%-10d %10.2f%n", usd, sgd);
         }
 
         System.out.println("\nTable 2(While loop)");
@@ -30,7 +30,7 @@ public class P3 {
         int usd = starting;
         while (usd <= ending){
             double sgd = usd * CONVERSION_RATE;
-            System.out.printf("%-10d %10.1f%n", usd, sgd);
+            System.out.printf("%-10d %10.2f%n", usd, sgd);
             usd += increment;
         }
 
@@ -40,7 +40,7 @@ public class P3 {
         usd = starting;
         do {
             double sgd = usd * CONVERSION_RATE;
-            System.out.printf("%-10d %10.1f%n", usd, sgd);
+            System.out.printf("%-10d %10s%n", usd, sgd);
             usd += increment;
         } while (usd <= ending);
 
