@@ -1,0 +1,20 @@
+Question 1:
+The file Numbers.java (in attachment) reads in an array of integers, invokes the selection sort
+algorithm to sort them, and then prints the sorted array. Save Sorting.java and Numbers.java to your
+directory. Numbers.java won't compile in its current form. Study it to see if you can figure out why.
+
+Numbers.java does not compile because it tries to sort an array of primitive int values with the method
+
+# Sorting.selectionSort(intList);
+
+The selectionSort method is declared as
+
+# public static void selectionSort(Comparable[] list)
+
+which means it only accepts objects that implement the java.lang.Comparable interface.
+Primitive types such as int are not objects and therefore cannot be placed in a Comparable[].
+
+To make the program compile you must give the sorting routine an array of objects that do implement Comparable. 
+The easiest way is to use the wrapper class Integer (which already implements Comparable<Integer>). 
+Declare the array as Integer[] and let Java’s autoboxing convert each int you read from the scanner into an Integer object. 
+Once the array holds Integer objects, Sorting.selectionSort can be called without any further changes.
